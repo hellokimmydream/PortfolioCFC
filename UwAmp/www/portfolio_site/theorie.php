@@ -104,6 +104,7 @@ function suffixe($n) { return $n == 1 ? '1ère' : $n . 'ème'; }
     <meta charset="UTF-8">
     <title>Portfolio - Théorie</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="comportement.js" defer></script>
 </head>
 <body>
 <div class="page">
@@ -120,6 +121,10 @@ function suffixe($n) { return $n == 1 ? '1ère' : $n . 'ème'; }
         </nav>
         <div class="search-container">
             <div class="search"></div>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Rechercher...">
+                <ul id="suggestionBox"></ul>
+            </div>
         </div>
     </header>
 

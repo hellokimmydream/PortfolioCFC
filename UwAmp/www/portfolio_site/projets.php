@@ -64,6 +64,7 @@ ksort($projetsParAnnee);
     <meta charset="UTF-8">
     <title>Portfolio - Projets</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="comportement.js" defer></script>
 </head>
 <body>
 <div class="page">
@@ -80,6 +81,10 @@ ksort($projetsParAnnee);
         </nav>
         <div class="search-container">
             <div class="search"></div>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Rechercher...">
+                <ul id="suggestionBox"></ul>
+            </div>
         </div>
     </header>
 
@@ -335,6 +340,13 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         noResult.style.display = totalVisible === 0 ? "block" : "none";
+    }
+
+    // Ouvrir automatiquement le projet ciblé par l'ancre (#projet-X)
+    if (window.location.hash.indexOf("#projet-") === 0) {
+        var idCible = window.location.hash.replace("#projet-", "");
+        var cible = document.querySelector(".sidebar-item[data-projet='" + idCible + "']");
+        if (cible) cible.click();
     }
 });
 </script>

@@ -85,6 +85,7 @@ foreach ($modules as $m) {
     <meta charset="UTF-8">
     <title>Portfolio - Modules</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="comportement.js" defer></script>
 </head>
 <body>
 <div class="page">
@@ -101,6 +102,10 @@ foreach ($modules as $m) {
         </nav>
         <div class="search-container">
             <div class="search"></div>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Rechercher...">
+                <ul id="suggestionBox"></ul>
+            </div>
         </div>
     </header>
 
@@ -292,6 +297,13 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         noResult.style.display = totalVisible === 0 ? "block" : "none";
+    }
+
+    // Ouvrir automatiquement le module ciblé par l'ancre (#module-X)
+    if (window.location.hash.indexOf("#module-") === 0) {
+        var idCible = window.location.hash.replace("#module-", "");
+        var cible = document.querySelector(".sidebar-item[data-module='" + idCible + "']");
+        if (cible) cible.click();
     }
 });
 </script>

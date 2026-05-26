@@ -36,19 +36,20 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("bio-modal")?.classList.remove("show");
     });
 
-    // 6) Recherche avec suggestions
+    // 6) Recherche dynamique (projets, modules, matières) via recherche.php
     const searchIcon = document.querySelector(".search");
     const searchBox = document.querySelector(".search-box");
     const searchInput = document.getElementById("search-input");
     const suggestionBox = document.getElementById("suggestionBox");
-    const suggestions = ["Accueil","Projets","Théorie","Modules","About me","Développement","Javascript","HTML","CSS"];
 
+    // Ouvrir / fermer la boîte de recherche au clic sur la loupe
     searchIcon?.addEventListener("click", e => {
         e.stopPropagation();
         searchBox?.classList.toggle("show");
         searchInput?.focus();
     });
 
+    // Fermer si on clique en dehors
     document.addEventListener("click", e => {
         if (!searchBox?.contains(e.target) && !searchIcon?.contains(e.target)) {
             searchBox?.classList.remove("show");
@@ -56,25 +57,50 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    // Lancer la recherche complète (page recherche.php)
+    function lancerRecherche(terme) {
+        const q = (terme || "").trim();
+        if (q) window.location.href = "recherche.php?q=" + encodeURIComponent(q);
+    }
+
+    // Entrée = aller à la page de résultats
+    searchInput?.addEventListener("keydown", e => {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            lancerRecherche(searchInput.value);
+        }
+    });
+
+    // Suggestions en direct (appelle l'API de recherche)
+    let suggestTimer = null;
     searchInput?.addEventListener("input", () => {
         if (!suggestionBox) return;
-        const query = searchInput.value.toLowerCase();
-        suggestionBox.innerHTML = "";
-        if (!query) { suggestionBox.style.display = "none"; return; }
+        const query = searchInput.value.trim();
 
-        const filtered = suggestions.filter(item => item.toLowerCase().includes(query));
-        if (!filtered.length) { suggestionBox.style.display = "none"; return; }
+        // petit délai pour éviter une requête à chaque touche
+        clearTimeout(suggestTimer);
+        if (!query) { suggestionBox.style.display = "none"; suggestionBox.innerHTML = ""; return; }
 
-        filtered.forEach(item => {
-            const li = document.createElement("li");
-            li.textContent = item;
-            li.addEventListener("click", () => {
-                searchInput.value = item;
-                suggestionBox.style.display = "none";
-            });
-            suggestionBox.appendChild(li);
-        });
-        suggestionBox.style.display = "block";
+        suggestTimer = setTimeout(() => {
+            fetch("api_recherche.php?q=" + encodeURIComponent(query))
+                .then(r => r.json())
+                .then(items => {
+                    suggestionBox.innerHTML = "";
+                    if (!items.length) { suggestionBox.style.display = "none"; return; }
+
+                    items.forEach(item => {
+                        const li = document.createElement("li");
+                        li.innerHTML = '<span class="suggestion-type">' + item.type + '</span>'
+                                     + '<span class="suggestion-title">' + item.titre + '</span>';
+                        li.addEventListener("click", () => {
+                            window.location.href = item.lien;
+                        });
+                        suggestionBox.appendChild(li);
+                    });
+                    suggestionBox.style.display = "block";
+                })
+                .catch(() => { suggestionBox.style.display = "none"; });
+        }, 200);
     });
 
     // 7) Logo intro animation
