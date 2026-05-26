@@ -45,17 +45,30 @@ $testsModules = $pdo->query("
     SELECT 
         tm.module_id,
         nm.note,
-        tm.date_test
+        tm.date_test,
+        pr.nom AS prof_nom,
+        pr.prenom AS prof_prenom
     FROM t_tests_modules tm
     LEFT JOIN t_notes_modules nm ON nm.test_id = tm.test_id
+    LEFT JOIN t_professeur pr ON pr.professeur_id = tm.professeur_id
     ORDER BY tm.date_test
 ")->fetchAll(PDO::FETCH_ASSOC);
 
 $notesParModule = array();
+$profsParModule = array();
 foreach ($testsModules as $t) {
     $mid = $t['module_id'];
     if (!isset($notesParModule[$mid])) $notesParModule[$mid] = array();
     if ($t['note'] !== null) $notesParModule[$mid][] = (float)$t['note'];
+
+    // Mémoriser le(s) prof(s) du module (sans doublon)
+    if (!isset($profsParModule[$mid])) $profsParModule[$mid] = array();
+    if ($t['prof_nom']) {
+        $nomComplet = trim($t['prof_prenom'] . ' ' . $t['prof_nom']);
+        if (!in_array($nomComplet, $profsParModule[$mid])) {
+            $profsParModule[$mid][] = $nomComplet;
+        }
+    }
 }
 
 function moyenneArr($arr) {
@@ -85,7 +98,6 @@ foreach ($modules as $m) {
     <meta charset="UTF-8">
     <title>Portfolio - Modules</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="comportement.js" defer></script>
 </head>
 <body>
 <div class="page">
@@ -102,10 +114,6 @@ foreach ($modules as $m) {
         </nav>
         <div class="search-container">
             <div class="search"></div>
-            <div class="search-box">
-                <input type="text" id="search-input" placeholder="Rechercher...">
-                <ul id="suggestionBox"></ul>
-            </div>
         </div>
     </header>
 
@@ -170,6 +178,7 @@ foreach ($modules as $m) {
                 $projetsLies = isset($projetsParModule[$mid]) ? $projetsParModule[$mid] : array();
                 $notes = isset($notesParModule[$mid]) ? $notesParModule[$mid] : array();
                 $moyMod = moyenneArr($notes);
+                $profs = isset($profsParModule[$mid]) ? $profsParModule[$mid] : array();
             ?>
             <div class="detail-content" data-module="<?php echo $mid; ?>">
 
@@ -180,6 +189,10 @@ foreach ($modules as $m) {
                         <?php if ($moyMod !== null): ?>
                         <span class="dot">·</span>
                         <span>Moyenne <?php echo number_format($moyMod, 1); ?> / 6</span>
+                        <?php endif; ?>
+                        <?php if (!empty($profs)): ?>
+                        <span class="dot">·</span>
+                        <span><?php echo htmlspecialchars(implode(', ', $profs)); ?></span>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -192,6 +205,20 @@ foreach ($modules as $m) {
                             : '<em>Pas de description disponible.</em>'; ?>
                     </div>
                 </div>
+
+                <?php if (!empty($profs)): ?>
+                <div class="detail-section">
+                    <div class="detail-section-title"><?php echo count($profs) > 1 ? 'Enseignants' : 'Enseignant'; ?></div>
+                    <div class="detail-info-list">
+                        <?php foreach ($profs as $nomProf): ?>
+                        <div class="info-row">
+                            <div class="info-row-key">Professeur</div>
+                            <div class="info-row-val"><?php echo htmlspecialchars($nomProf); ?></div>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+                <?php endif; ?>
 
                 <?php if (!empty($projetsLies)): ?>
                 <div class="detail-section">
@@ -297,13 +324,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         noResult.style.display = totalVisible === 0 ? "block" : "none";
-    }
-
-    // Ouvrir automatiquement le module ciblé par l'ancre (#module-X)
-    if (window.location.hash.indexOf("#module-") === 0) {
-        var idCible = window.location.hash.replace("#module-", "");
-        var cible = document.querySelector(".sidebar-item[data-module='" + idCible + "']");
-        if (cible) cible.click();
     }
 });
 </script>
