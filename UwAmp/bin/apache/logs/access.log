@@ -3481,3 +3481,10 @@
 ::1 - - [26/May/2026:09:12:58 +0200] "GET /?getimg=folder HTTP/1.1" 200 537
 ::1 - - [26/May/2026:09:13:48 +0200] "GET /portfolio_site/ HTTP/1.1" 200 3371
 ::1 - - [26/May/2026:09:13:53 +0200] "GET /portfolio_site/accueil.php HTTP/1.1" 200 29231
+::1 - - [26/May/2026:09:54:48 +0200] "GET / HTTP/1.1" 200 1778
+::1 - - [26/May/2026:09:54:48 +0200] "GET /?getimg=title HTTP/1.1" 200 6119
+::1 - - [26/May/2026:09:54:48 +0200] "GET /?getimg=folder HTTP/1.1" 200 537
+::1 - - [26/May/2026:09:54:48 +0200] "GET /?getimg=favicon HTTP/1.1" 200 5430
+::1 - - [26/May/2026:09:54:50 +0200] "GET /portfolio_site/ HTTP/1.1" 200 3371
+::1 - - [26/May/2026:09:54:50 +0200] "GET /favicon.ico HTTP/1.1" 404 309
+::1 - - [26/May/2026:09:54:54 +0200] "GET /portfolio_site/accueil.php HTTP/1.1" 200 29231
