@@ -4490,3 +4490,19 @@
 [Tue May 26 09:21:52.919652 2026] [mpm_winnt:warn] [pid 16932:tid 1604] (OS 995)L’opération d’entrée/sortie a été abandonnée en raison de l’arrêt d’un thread ou à la demande d’une application.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
 [Tue May 26 09:21:52.919652 2026] [mpm_winnt:warn] [pid 16932:tid 808] (OS 995)L’opération d’entrée/sortie a été abandonnée en raison de l’arrêt d’un thread ou à la demande d’une application.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
 [Tue May 26 09:21:54.941360 2026] [mpm_winnt:notice] [pid 16932:tid 768] AH00364: Child: All worker threads have exited.
+[Tue May 26 09:54:42.476268 2026] [ssl:warn] [pid 9956:tid 768] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue May 26 09:54:42.476268 2026] [ssl:warn] [pid 9956:tid 768] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue May 26 09:54:42.514578 2026] [core:warn] [pid 9956:tid 768] AH00098: pid file C:/Users/pr53sjy/Documents/GitHub/PortfolioCFC/UwAmp/bin/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue May 26 09:54:42.557362 2026] [ssl:warn] [pid 9956:tid 768] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue May 26 09:54:42.565456 2026] [ssl:warn] [pid 9956:tid 768] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue May 26 09:54:42.565456 2026] [ssl:warn] [pid 9956:tid 768] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue May 26 09:54:43.221363 2026] [mpm_winnt:notice] [pid 9956:tid 768] AH00455: Apache/2.4.18 (Win32) OpenSSL/1.0.2f PHP/5.6.18 configured -- resuming normal operations
+[Tue May 26 09:54:43.221363 2026] [mpm_winnt:notice] [pid 9956:tid 768] AH00456: Server built: Jan 28 2016 09:58:25
+[Tue May 26 09:54:43.221363 2026] [core:notice] [pid 9956:tid 768] AH00094: Command line: 'C:\\Users\\pr53sjy\\Documents\\GitHub\\PortfolioCFC\\UwAmp\\bin\\apache\\bin\\httpd.exe -d C:/Users/pr53sjy/Documents/GitHub/PortfolioCFC/UwAmp/bin/apache -f C:\\Users\\pr53sjy\\Documents\\GitHub\\PortfolioCFC\\UwAmp\\bin\\apache\\conf\\httpd.conf'
+[Tue May 26 09:54:43.221363 2026] [mpm_winnt:notice] [pid 9956:tid 768] AH00418: Parent: Created child process 12100
+[Tue May 26 09:54:43.719417 2026] [ssl:warn] [pid 12100:tid 644] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue May 26 09:54:43.719417 2026] [ssl:warn] [pid 12100:tid 644] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue May 26 09:54:43.800190 2026] [ssl:warn] [pid 12100:tid 644] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue May 26 09:54:43.800190 2026] [ssl:warn] [pid 12100:tid 644] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue May 26 09:54:43.800190 2026] [ssl:warn] [pid 12100:tid 644] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue May 26 09:54:43.818257 2026] [mpm_winnt:notice] [pid 12100:tid 644] AH00354: Child: Starting 64 worker threads.
