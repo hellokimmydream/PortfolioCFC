@@ -1,0 +1,863 @@
+/* ============================================================
+   PORTFOLIO CAMILLE - styles.css COMPLET
+   Style : Sidebar + Détail (Apple Mail / Notion)
+   ============================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+body {
+  background: #f5f5f7;
+  color: #1d1d1f;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.page {
+  width: 100%;
+  max-width: 1280px;
+  margin: 24px;
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e6e6e8;
+}
+
+/* --- HEADER --- */
+.header {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  border-bottom: 1px solid #e6e6e8;
+  background: #fafafa;
+  flex-shrink: 0;
+}
+
+.logo-image img {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: block;
+}
+
+.nav {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #555;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+}
+
+.nav a:hover {
+  background: #efefef;
+  color: #111;
+}
+
+.nav a.active {
+  background: #111;
+  color: #fff;
+}
+
+.search-container {
+  width: 38px;
+}
+
+.search {
+  width: 18px;
+  height: 18px;
+  border: 1.8px solid #555;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.search::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 2px;
+  background: #555;
+  bottom: -4px;
+  right: -5px;
+  transform: rotate(35deg);
+}
+
+/* --- PAGE TITLE --- */
+.page-title-block {
+  padding: 28px 32px 20px 32px;
+  border-bottom: 1px solid #e6e6e8;
+}
+
+.page-title-block h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 4px;
+  letter-spacing: -0.3px;
+}
+
+.page-title-block p {
+  color: #6e6e73;
+  font-size: 14px;
+}
+
+/* ============================================================
+   LAYOUT SIDEBAR + DÉTAIL
+   ============================================================ */
+.split-view {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  min-height: 600px;
+  height: calc(100vh - 220px);
+  max-height: 800px;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+  border-right: 1px solid #e6e6e8;
+  background: #fbfbfd;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sidebar-header {
+  padding: 16px;
+  border-bottom: 1px solid #e6e6e8;
+  flex-shrink: 0;
+}
+
+.sidebar-search {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.sidebar-search input {
+  width: 100%;
+  padding: 8px 12px 8px 32px;
+  font-size: 13px;
+  border: 1px solid #e0e0e2;
+  border-radius: 7px;
+  background: #fff;
+  color: #1d1d1f;
+  font-family: inherit;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+
+.sidebar-search input:focus {
+  outline: none;
+  border-color: #111;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+}
+
+.sidebar-search .search-icon {
+  position: absolute;
+  left: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #999;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.sidebar-filters {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.filter-chip {
+  font-size: 11px;
+  padding: 4px 10px;
+  background: #fff;
+  border: 1px solid #e0e0e2;
+  border-radius: 12px;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.filter-chip:hover {
+  border-color: #999;
+  color: #111;
+}
+
+.filter-chip.active {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+.sidebar-stats {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e6e6e8;
+  display: flex;
+  gap: 18px;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.stat-mini {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.stat-mini-num {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+}
+
+.stat-mini-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #888;
+  margin-top: 2px;
+  font-weight: 500;
+}
+
+.sidebar-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+.sidebar-group {
+  margin-bottom: 14px;
+}
+
+.sidebar-group-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #999;
+  padding: 6px 8px;
+  font-weight: 600;
+}
+
+.sidebar-item {
+  padding: 9px 10px;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-bottom: 2px;
+  transition: background 0.1s ease;
+  user-select: none;
+}
+
+.sidebar-item:hover {
+  background: #efefef;
+}
+
+.sidebar-item.active {
+  background: #111;
+  color: #fff;
+}
+
+.sidebar-item-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1d1d1f;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.3;
+}
+
+.sidebar-item-meta {
+  font-size: 11px;
+  color: #888;
+  margin-top: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sidebar-item.active .sidebar-item-title,
+.sidebar-item.active .sidebar-item-meta {
+  color: #fff;
+}
+
+.sidebar-item.active .sidebar-item-meta {
+  opacity: 0.7;
+}
+
+.sidebar-empty {
+  text-align: center;
+  padding: 30px 20px;
+  color: #999;
+  font-size: 13px;
+  font-style: italic;
+}
+
+/* --- PANNEAU DÉTAIL --- */
+.detail-panel {
+  overflow-y: auto;
+  background: #fff;
+}
+
+.detail-empty {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #b0b0b5;
+  text-align: center;
+  padding: 40px;
+}
+
+.detail-empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.4;
+}
+
+.detail-empty-text {
+  font-size: 14px;
+}
+
+.detail-content {
+  display: none;
+  padding: 32px 36px;
+}
+
+.detail-content.active {
+  display: block;
+}
+
+.detail-header {
+  border-bottom: 1px solid #e6e6e8;
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+}
+
+.detail-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 8px;
+  letter-spacing: -0.2px;
+}
+
+.detail-subtitle {
+  font-size: 13px;
+  color: #6e6e73;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.detail-subtitle .dot {
+  color: #c0c0c5;
+}
+
+.detail-section {
+  margin-bottom: 24px;
+}
+
+.detail-section:last-child {
+  margin-bottom: 0;
+}
+
+.detail-section-title {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.detail-description {
+  font-size: 14px;
+  color: #1d1d1f;
+  line-height: 1.65;
+}
+
+.detail-description em {
+  color: #999;
+  font-style: italic;
+}
+
+/* Liste clé-valeur */
+.detail-info-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-row {
+  display: flex;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f2;
+  align-items: baseline;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-row-key {
+  font-size: 12px;
+  color: #888;
+  min-width: 110px;
+  flex-shrink: 0;
+  font-weight: 400;
+}
+
+.info-row-val {
+  font-size: 14px;
+  color: #1d1d1f;
+  font-weight: 500;
+  flex: 1;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: #f0f0f2;
+  color: #555;
+}
+
+.badge-acquis {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.badge-large {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.badge-non {
+  background: #fdecea;
+  color: #c62828;
+}
+
+/* ============================================================
+   THÉORIE : Bloc années dans le détail
+   ============================================================ */
+.matiere-detail {
+  display: none;
+}
+
+.matiere-detail.active {
+  display: block;
+}
+
+.matiere-moyenne-bloc {
+  background: #fafafc;
+  border: 1px solid #e6e6e8;
+  border-radius: 10px;
+  padding: 18px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.matiere-moyenne-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #888;
+  font-weight: 600;
+}
+
+.matiere-moyenne-value {
+  font-size: 30px;
+  font-weight: 700;
+  color: #111;
+  line-height: 1;
+}
+
+.matiere-moyenne-value span {
+  font-size: 16px;
+  color: #999;
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+.annee-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.annee-block {
+  border: 1px solid #e6e6e8;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  transition: border-color 0.15s ease;
+}
+
+.annee-block.open {
+  border-color: #111;
+}
+
+.annee-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.15s ease;
+}
+
+.annee-head:hover {
+  background: #fafafa;
+}
+
+.annee-title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.annee-num {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+.annee-year {
+  font-size: 11px;
+  color: #888;
+}
+
+.annee-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.annee-moy {
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+}
+
+.annee-block.open .annee-moy {
+  color: #111;
+}
+
+.chevron {
+  color: #999;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+  display: inline-block;
+  line-height: 1;
+}
+
+.annee-block.open .chevron {
+  transform: rotate(90deg);
+  color: #111;
+}
+
+.annee-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.annee-block.open .annee-body {
+  max-height: 2000px;
+  border-top: 1px solid #e6e6e8;
+}
+
+.trimestres-grid {
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.trim-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 6px 0;
+  border-bottom: 1px solid #f0f0f2;
+}
+
+.trim-row:last-child {
+  border-bottom: none;
+}
+
+.trim-num {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #888;
+  min-width: 90px;
+  letter-spacing: 0.5px;
+}
+
+.trim-bar-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.trim-bar {
+  flex: 1;
+  height: 6px;
+  background: #ececef;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.trim-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #555, #111);
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+.trim-note {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111;
+  min-width: 50px;
+  text-align: right;
+}
+
+.trim-empty {
+  color: #b0b0b5;
+  font-style: italic;
+  font-size: 12px;
+  flex: 1;
+}
+
+/* Détails tests sous trimestre */
+.tests-detail {
+  margin-top: 6px;
+  padding-left: 0;
+}
+
+.tests-detail .test-line {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0;
+  font-size: 11px;
+  color: #999;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+  .page {
+    margin: 12px;
+  }
+  .split-view {
+    grid-template-columns: 1fr;
+    height: auto;
+    max-height: none;
+  }
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid #e6e6e8;
+    max-height: 380px;
+  }
+  .detail-panel {
+    min-height: 400px;
+  }
+  .header {
+    padding: 12px 16px;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .nav {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .nav a {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  .page-title-block {
+    padding: 18px 20px 14px;
+  }
+  .detail-content {
+    padding: 22px 20px;
+  }
+  .info-row {
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px 0;
+  }
+  .info-row-key {
+    min-width: 0;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* ============================================================
+   ACCUEIL (conservé)
+   ============================================================ */
+.hero {
+  color: #f1f1f1;
+  margin: 24px 32px 0;
+  height: 240px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #a8a8a8, #181818);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-title {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.hero button {
+  position: absolute;
+  bottom: 24px;
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.about {
+  margin: 32px;
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.about-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: #ddd;
+  border: 2px solid #e6e6e8;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.about-text h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.about-text p {
+  font-size: 14px;
+  color: #6e6e73;
+  line-height: 1.6;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 26px 30px;
+  border-radius: 12px;
+  min-width: 320px;
+}
+
+.modal-content button {
+  margin-top: 16px;
+  padding: 8px 18px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.intro-logo img {
+  width: 400px;
+  opacity: 0;
+  animation: fadeInOut 4s ease-in-out forwards;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+}

@@ -1,0 +1,401 @@
+skills_id	nom_skills
+1	HTML
+2	CSS
+3	JavaScript
+4	Réseau
+5	Analyse de données
+6	Modélisation des données
+7	Protection des données
+8	Sécurité des données
+9	Concevoir des applications
+10	Implémenter des applications
+11	C#
+12	Projet management
+13	Exécuter des mandats
+14	Documenter son travail
+15	Mettre en service un poste ICT
+16	Installer un système d'exploitation 
+17	Compatibilité matérielle
+18	Configuration des applications
+19	Connexion au réseau
+20	Sécurité
+21	Gestion des utilisateurs et des dossiers
+22	Surveillance et diagnostic
+23	Test et correction d’erreurs
+24	Documentation
+25	Ergonomie
+26	Analyser un problème
+27	Identifier les besoins des utilisateurs
+28	Créer des diagrammes de flux
+29	Créer un schéma IPO
+30	Choisir les bons types de données
+31	Concevoir la structure d’un programme
+32	Écrire du code propre et commenté
+33	Utiliser des structures de contrôle
+34	Créer et utiliser des fonctions
+35	Tester et corriger des erreurs
+36	Installer un système d'exploitation
+37	Configurer un système d'exploitation
+38	Installer des logiciels
+39	Configurer des logiciels
+40	Vérifier la compatibilité du matériel
+41	Configurer un réseau
+42	Tester la connexion réseau
+43	Appliquer des mesures de sécurité
+44	Gérer les utilisateurs et droits
+45	Créer une structure de fichiers
+46	Surveiller les ressources système
+47	Diagnostiquer des erreurs système
+48	Documenter les étapes de travail
+49	Aménager un poste selon les règles ergonomiques
+50	Recueillir les exigences réseau auprès du mandant
+51	Déterminer les services réseau souhaités
+52	Concevoir une architecture réseau logique
+53	Concevoir une architecture réseau physique
+54	Représenter un réseau sur un diagramme
+55	Planifier l’installation d’un réseau
+56	Installer les composants réseau
+57	Configurer les composants réseau selon la documentation
+58	Gérer les ressources partagées
+59	Mettre en place des droits d’accès et sécurité
+60	Tester le réseau avec tous les composants connectés
+61	Documenter le réseau
+62	Connaître les règles d’adressage IP
+63	Identifier les types de câbles réseau
+64	Expliquer la fonction des composants réseau
+65	Décrire les options d’accès Internet et leurs conséquences
+66	Comprendre la maintenance réseau
+67	Expliquer le modèle OSI et les couches réseau
+68	Analyser des ensembles d’informations
+69	Classer des données provenant de différentes sources
+70	Caractériser la qualité des données (complétude, redondance, etc.)
+71	Nettoyer (purifier) les données
+72	Sélectionner des informations pertinentes pour l’analyse
+73	Prendre en compte la confidentialité des données (p.?ex. données personnelles)
+74	Modéliser conceptuellement les données (entités, attributs, relations)
+75	Définir les types d’entité et leurs attributs
+76	Décrire les relations (cardinalité, association) entre entités
+77	Transformer un modèle conceptuel en modèle relationnel
+78	Comprendre les différences entre modèle conceptuel et modèle logique
+79	Utiliser les principes du modèle relationnel (relational model)
+80	Catégoriser les données selon le niveau de protection requis  
+81	Améliorer la sécurité des données d’une infrastructure existante  
+82	Mettre en place des sauvegardes de données  
+83	Restaurer des données à partir des sauvegardes  
+84	Vérifier la conformité des applications aux lois sur la protection des données  
+85	Évaluer les conséquences des violations de la protection des données  
+86	Choisir des logiciels selon les licences pour garantir la sécurité  
+87	Utiliser le chiffrement des données (cryptage)  
+88	Gérer les mots de passe et l’authentification  
+89	Comprendre la différence entre authentification et autorisation  
+90	Classifier la sensibilité des données selon des critères juridiques  
+91	Appliquer les réglementations locales (LPD, RGPD)  
+92	Planifier la redondance des données (stockage local, cloud, serveur)  
+93	Documenter les procédures de protection des données  
+94	Prendre note des tâches et clarifier les attentes du mandant  
+95	Clarifier les incertitudes avec le mandant  
+96	Planifier un mandat selon le modèle d’action exhaustive  
+97	Exécuter un mandat de façon structurée et autonome  
+98	Utiliser des techniques de recherche d’information  
+99	Résoudre des problèmes efficacement  
+100	Faire preuve de créativité pour trouver des solutions  
+101	Apprendre de manière autonome en cours de projet  
+102	Documenter le travail produit  
+103	Présenter les résultats au mandant  
+104	Porter un regard critique sur son travail  
+105	Utiliser des check?lists pour suivre les tâches  
+106	Gérer son temps et ses priorités  
+107	Organiser les différentes phases du projet (initialisation, réalisation, clôture)  
+108	Représenter un processus dans un diagramme de flux  
+109	Transposer un diagramme de flux en script  
+110	Intégrer un script dans un environnement système  
+111	Tester un script pour vérifier son bon fonctionnement  
+112	Documenter l’utilisation du script pour les utilisateurs  
+113	Connaître les structures de contrôle (séquence, sélection, itération)  
+114	Sécuriser les scripts dans l’environnement d’administration  
+115	Analyser le potentiel d’automatisation d’une tâche  
+116	Connaître les fonctions de script de base  
+117	Créer un plan de test pour les scripts  
+118	Maintenir et mettre à jour la documentation des scripts  
+119	Installer le rôle DNS sur un serveur  
+120	Configurer une zone DNS (zone principale)  
+121	Créer des entrées A, CNAME et MX dans DNS  
+122	Mettre une adresse IP statique sur le serveur  
+123	Configurer des redirecteurs DNS  
+124	Utiliser les commandes nslookup pour interroger le DNS  
+125	Vider et afficher le cache DNS (flush / display)  
+126	Installer le rôle Active Directory (AD DS)  
+127	Configurer une forêt Active Directory et un domaine  
+128	Créer des unités d’organisation (OU) dans AD  
+129	Créer des utilisateurs et des groupes dans AD  
+130	Gérer les droits via AD  
+131	Installer le service DHCP sur un serveur  
+132	Configurer une étendue DHCP avec plage d’adresses  
+133	Définir des options DHCP (passerelle, DNS, bail, etc.)  
+134	Vérifier la fonctionnalité des services installés  
+135	Documenter la configuration des services serveur  
+136	Interpréter un modèle de données logique relationnel
+137	Implémenter un modèle de données dans un SGBD
+138	Définir des contraintes d’intégrité référentielle
+139	Insérer des données avec le langage DML
+140	Importer des données depuis des fichiers
+141	Vérifier l’exhaustivité des données insérées
+142	Vérifier l’exactitude des données via des requêtes
+143	Corriger des données erronées
+144	Corriger des données incomplètes
+145	Créer des pages HTML sémantiques  
+146	Utiliser les feuilles de style CSS pour le design  
+147	Construire une mise en page responsive  
+148	Intégrer des images et des médias dans les pages web  
+149	Créer des liens hypertextes et des formulaires  
+150	Optimiser les pages web pour le référencement (SEO)  
+151	Publier un site sur un serveur via FTP ou SSH  
+152	Choisir un hébergement web adapté  
+153	Gérer un nom de domaine  
+154	Tester la compatibilité des pages dans différents navigateurs  
+155	Valider le code HTML/CSS (par ex. avec des validateurs W3C)  
+156	Mettre en place des mesures de sécurité de base (HTTPS, formulaire sécurisé)  
+157	Documenter la structure du site et l’arborescence  
+158	Mettre à jour un site web existant  
+159	Gérer les versions des fichiers web  
+160	Analyser les performances d’un site (temps de chargement, poids des pages)  
+161	Vérifier la faisabilité d’un objectif selon ressources et délais  
+162	Documenter les résultats et discuter avec le client  
+163	Identifier un projet et définir un business case  
+164	Analyser les risques d’un projet  
+165	Évaluer la rentabilité d’un projet  
+166	Planifier un projet de façon méthodique (waterfall ou agile)  
+167	Attribuer des tâches / lots de travail à des membres d’équipe  
+168	Coordonner l’exécution des tâches (qualité, délais, coûts)  
+169	Surveiller l’avancement du projet  
+170	Établir des rapports d’état pour le client  
+171	Documenter et expliquer les résultats du projet  
+172	Présenter la solution finale au client  
+173	Faire un retour critique sur le déroulement du projet avec l’équipe  
+174	Tirer des conclusions pour améliorer l’efficacité des prochains projets  
+175	Sélectionner des terminaux IoE selon les exigences du mandant  
+176	Connaître les domaines d’utilisation des terminaux IoE  
+177	Identifier les technologies filaires et sans fil pour connecter des terminaux IoE  
+178	Comprendre le processus d’adressage des terminaux IoE dans un réseau  
+179	Reconnaître la structure des terminaux IoE (capteurs, actionneurs, logiciels)  
+180	Analyser les impacts métier des applications IoE  
+181	Configurer des terminaux IoE selon des consignes sécurisées  
+182	Utiliser des listes de contrôle pour la configuration IoE  
+183	Gérer la mise à jour de firmware des terminaux IoE  
+184	Appliquer des méthodes d’exploitation sécurisée (segmentation réseau, cryptage)  
+185	Intégrer les terminaux IoE à une plateforme IoE existante  
+186	Adapter les terminaux IoE via le script ou le paramétrage  
+187	Tester les terminaux IoE intégrés selon un protocole de test  
+188	Documenter une solution IoE (terminaux + plateforme)  
+189	Garantir la sécurité des données sensibles transmises par les terminaux IoE  
+190	Comprendre les concepts de classe et d’objet  
+191	Implémenter des classes et des objets  
+192	Utiliser l’encapsulation (attributs privés, getters/setters)  
+193	Mettre en œuvre l’héritage entre classes  
+194	Utiliser le polymorphisme (sous-typage)  
+195	Gérer les méthodes abstraites et interfaces  
+196	Utiliser des constructeurs et destructeurs  
+197	Gérer les exceptions dans la programmation orientée objet  
+198	Appliquer la composition (objets dans des objets)  
+199	Travailler avec des collections d’objets (listes, tableaux, etc.)  
+200	Utiliser des méthodes statiques vs d’instance  
+201	Concevoir des classes selon le principe de responsabilité unique  
+202	Documenter le code orienté objet  
+203	Écrire des tests unitaires pour des classes (ou du code OO)  
+204	Utiliser des principes SOLID (si enseigné)  
+205	Recueillir et analyser les besoins des utilisateurs  
+206	Définir des maquettes ou prototypes d’interfaces (wireframes, mock?ups)  
+207	Utiliser des outils graphiques de conception d’interface  
+208	Identifier les éléments problématiques d’une interface utilisateur  
+209	Vérifier la faisabilité technique des prototypes  
+210	Discuter et itérer les prototypes avec des parties prenantes  
+211	Appliquer des principes d’ergonomie dans une interface  
+212	Concevoir des interfaces responsives  
+213	Implémenter des interfaces utilisateur fonctionnelles selon un prototype  
+214	Gérer la navigation entre les écrans / les vues  
+215	Assurer l’accessibilité des interfaces (ex : compatibilité clavier, contraste, etc.)  
+216	Appliquer des principes de sécurité dans l’UI (authentification, validation des entrées)  
+217	Documenter les composants d’interface (structure, comportement, interaction)  
+218	Tester les interfaces (utilisabilité, comportement)  
+219	Maintenir et faire évoluer les interfaces utilisateur  
+220	Élaborer un concept de sécurité des données et des rôles  
+221	Définir des autorisations d’accès (rôles, permissions)  
+222	Écrire des requêtes SQL pour interroger les données  
+223	Utiliser des fonctions de filtrage et d’agrégation  
+224	Traiter les données (modification, suppression, transaction)  
+225	Utiliser des transactions pour garantir l’intégrité des données  
+226	Faire des sauvegardes des données et du schéma de la base  
+227	Restaurer une base de données à partir d’un backup  
+228	Modifier ou migrer un schéma de base de données  
+229	Migrer des données entre schémas ou bases  
+230	Optimiser la base de données pour la performance  
+231	Analyser les besoins en ressources selon les heures d’accès  
+232	Comprendre la structure d’une blockchain (blocks, nœuds, chaînes)  
+233	Différencier les types de blockchain (publique, privée, permissionnée)  
+234	Expliquer le principe du consensus (Proof of Work, Proof of Stake, etc.)  
+235	Écrire des smart contracts (par exemple en Solidity)  
+236	Déployer des smart contracts sur une blockchain  
+237	Gérer des transactions blockchain (envoyer, recevoir, vérifier)  
+238	Utiliser un portefeuille numérique (wallet)  
+239	Analyser l’historique des transactions sur une blockchain  
+240	Sécuriser les données dans une blockchain (cryptographie, hachage)  
+241	Comprendre les implications de la blockchain sur la confidentialité et la protection des données  
+242	Mettre en place un réseau blockchain (noeuds, configuration, synchronisation)  
+243	Intégrer la blockchain dans un système d’information existant  
+244	Faire une veille technologique sur les protocoles blockchain et crypto  
+245	Évaluer les cas d’usage blockchain pertinents (supply chain, finance, identité, etc.)  
+246	Documenter une solution blockchain (architecture, flux, sécurité)  
+247	Tester une solution blockchain (tests unitaires, tests d’intégrité)  
+248	Gérer la mise à jour des smart contracts (versioning)  
+249	Évaluer les aspects réglementaires liés à la blockchain (fiscalité, conformité)  
+250	Identifier les éléments d’un processus métier
+251	Collecter des informations sur les processus dans l’entreprise
+252	Analyser l’organisation d’une entreprise
+253	Modéliser des processus métier avec BPMN
+254	Représenter un processus sous forme de diagramme
+255	Décomposer un processus en étapes
+256	Définir les ressources, les acteurs et les livrables liés à chaque étape
+257	Différencier les processus techniques et organisationnels
+258	Évaluer la possibilité d’automatisation d’un processus
+259	Proposer des optimisations de processus métier
+260	Documenter les descriptions des processus
+261	Communiquer les processus modélisés aux parties prenantes
+262	Rechercher des informations sur des solutions ICT innovantes  
+263	Analyser des idées techniques et économiques  
+264	Évaluer le potentiel technique d’une idée  
+265	Identifier les risques associés à des innovations  
+266	Proposer des variantes de solution innovantes  
+267	Faire une preuve de concept (Proof of Concept)  
+268	Présenter des idées innovantes sous forme de pitch  
+269	Collaborer dans une équipe pour développer une idée innovante  
+270	Définir un profil de groupe cible / d’utilisateur pour l’innovation  
+271	Valider des idées via des études de marché (primaire et secondaire)  
+272	Documenter des idées et des concepts innovants  
+273	Faire preuve de pensée créative et de pensée “out?of?the?box”  
+274	Synthétiser des informations complexes pour générer des innovations  
+275	Choisir des procédures de compression appropriées  
+276	Utiliser des méthodes de compression pour la sauvegarde de données  
+277	Utiliser des méthodes de compression pour la transmission de données  
+278	Comprendre les effets de la codification sur la transmission  
+279	Choisir des méthodes de codification sécurisées  
+280	Sélectionner des procédures de cryptage symétrique  
+281	Sélectionner des procédures de cryptage asymétrique  
+282	Utiliser des certificats et paires de clés (clé publique / privée)  
+283	Transférer des fichiers de façon sécurisée via cryptage  
+284	Évaluer la sécurité des technologies de cryptage  
+285	Identifier les risques liés aux différentes technologies de cryptage  
+286	Proposer des technologies alternatives de cryptage  
+287	Autonomie
+288	Processus de travail
+289	
+290	
+291	
+292	
+293	
+294	
+295	
+296	
+297	
+298	
+299	
+300	
+301	
+302	
+303	
+304	
+305	
+306	
+307	
+308	
+309	
+310	
+311	
+312	
+313	
+314	
+315	
+316	
+317	
+318	
+319	
+320	
+321	
+322	
+323	
+324	
+325	
+326	
+327	
+328	
+329	
+330	
+331	
+332	
+333	
+334	
+335	
+336	
+337	
+338	
+339	
+340	
+341	
+342	
+343	
+344	
+345	
+346	
+347	
+348	
+349	
+350	
+351	
+352	
+353	
+354	
+355	
+356	
+357	
+358	
+359	
+360	
+361	
+362	
+363	
+364	
+365	
+366	
+367	
+368	
+369	
+370	
+371	
+372	
+373	
+374	
+375	
+376	
+377	
+378	
+379	
+380	
+381	
+382	
+383	
+384	
+385	
+386	
+387	
+388	
+389	
+390	
+391	
+392	
+393	
+394	
+395	
+396	
+397	
+398	
+399	
+400	
